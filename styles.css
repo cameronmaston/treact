@@ -42,7 +42,7 @@ h1 {
 }
 
 .row {
-    max-width: 1300px;
+    max-width: 1200px;
     width: 100%;
     align-items: center;
     margin: 0 auto;
@@ -51,6 +51,7 @@ h1 {
 
 .container {
     padding: 80px;
+    margin: 0 auto;
 }
 
 .btn {
@@ -464,7 +465,7 @@ values
 
 .values__list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
 }
 
@@ -713,7 +714,7 @@ testimonials
     flex-direction: column;
     align-items: left;
     width: 512px;
-    width: 50%;
+    width: 100%;
 }
 
 .testimonial {
@@ -722,7 +723,6 @@ testimonials
 
 .testimonial__rating {
     margin: 4px 2px 0 0;
-    color: rgb(246, 173, 85);
 }
 
 .fa-star {
@@ -751,6 +751,8 @@ testimonials
 .testimonial__bottom {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testimonial__profile {
@@ -794,6 +796,11 @@ testimonials
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+.testimonial__button svg {
+    width: 16px;
+    height: 16px;
 }
 
 .divider {
@@ -856,6 +863,7 @@ start
     border-radius: 500px;
     text-align: center;
     color: #fff;
+    font-weight: bold;
     padding: 20px 40px;
     margin: 1px 32px 1px 1px;
     border-color: #a0aec0;
@@ -892,7 +900,7 @@ footer {
 }
 
 .footer__columns {
-    margin-top: 0;
+    margin-top: -48px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1125,6 +1133,10 @@ MEDIA QUERIES
         max-width: 384px;
     }
 
+    .feature__row {
+        max-width: 100%;
+    }
+
     #quality .row,
     #values .row {
         flex-direction: column-reverse;
@@ -1158,6 +1170,12 @@ MEDIA QUERIES
         flex-direction: column-reverse;
     }
 
+    #values .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
     #pricing .row {
         margin-top: 40px;
     }
@@ -1167,6 +1185,25 @@ MEDIA QUERIES
     .nav__logo {
         margin: 8px 0;
         padding-bottom: 4px;
+    }
+
+    .header__email {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header__email--input {
+        width: 100%;
+        position: static;
+        line-height: 1.5;
+        padding: 16px 0px 16px 32px;
+    }
+
+    .header__email--btn {
+       width: 100%; 
+       line-height: 1.5;
+       padding: 16px 0px;
+       margin: 16px 0px 0px;
     }
 
     .container {
@@ -1187,6 +1224,11 @@ MEDIA QUERIES
 
     .start__button:nth-child(1) {
         margin-right: 0;
+    }
+    
+    .start__button.btn__blue {
+        margin-top: 16px;
+        width: 100%;
     }
 
     #features .section__title,
@@ -1216,6 +1258,7 @@ MEDIA QUERIES
 
     .section__title {
         font-size: 30px;
+        text-align: center;
     }
 
     .btn {
@@ -1224,6 +1267,33 @@ MEDIA QUERIES
 
      .plan__bottom {
         padding: 2rem 1rem;
+    }
+
+    .testimonial__description {
+        padding-left: 0%;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer__column {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        min-width: 200px;
+        align-items: center;
+    }
+
+    .footer__columns {
+        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        justify-content: center;
     }
 
 }
